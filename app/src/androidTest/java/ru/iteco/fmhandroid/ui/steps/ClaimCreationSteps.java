@@ -145,7 +145,7 @@ public class ClaimCreationSteps {
         Thread.sleep(2000);
         onView(withId(R.id.add_comment_image_button)).perform(click());
         Thread.sleep(2000);
-        onView(withId(R.id.comm_text_input_edit_text)).perform(click(), replaceText("мой комментарий"), closeSoftKeyboard());
+        onView(withId(R.id.comment_text_input_layout)).perform(click(), replaceText("мой комментарий"), closeSoftKeyboard());
         onView(withId(R.id.save_button)).perform(scrollTo(), click());
         Thread.sleep(2000);
         onView(withIndex(allOf(withId(R.id.comment_description_text_view), withText("мой комментарий"),
@@ -174,7 +174,7 @@ public class ClaimCreationSteps {
                                 1),
                         isDisplayed()));
         appCompatImageButton2.perform(click());
-        onView(withId(R.id.comm_text_input_edit_text)).perform(click(), replaceText("комментарий отредактирован"), closeSoftKeyboard());
+        onView(withId(R.id.comment_text_input_layout)).perform(click(), replaceText("комментарий отредактирован"), closeSoftKeyboard());
         onView(withId(R.id.save_button)).perform(scrollTo(), click());
         Thread.sleep(2000);
         ViewInteraction textView = onView(
